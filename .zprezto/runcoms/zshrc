@@ -1,0 +1,36 @@
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# Customize to your needs...
+
+source $HOME/.bashrc_paths
+source $HOME/.bashrc_aliases
+
+# On Mac OS, the default limit on the number of simultaneous file descriptors open is too low and
+# a highly parallel build (make -jX) process may exceed this limit
+ulimit -S -n 1024
+
+# default editor
+export EDITOR=nano
+
+# Colors for Dark Terminal Themes
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+
+# Colors for Light Terminal Themes
+#export CLICOLOR=1
+#export LSCOLORS=ExFxBxDxCxegedabagacad
+
+# Move forward/backward a word
+bindkey -e
+bindkey '^[[1;9C' forward-word
+bindkey '^[[1;9D' backward-word

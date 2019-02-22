@@ -1,0 +1,22 @@
+# iOS
+new -s GO-JEK -n "iOS" -c ~/Workspaces/Gojek/gojek-ios
+splitw -v -p 50 -c ~/Workspaces/Gojek/gojek-ios
+
+# Ruby
+neww -n "Ruby" -c ~/Workspaces/Ruby
+
+# .Net
+neww -n ".Net" -c ~/Workspaces/DotNet/DotNetCore
+
+# Clojure
+neww -n "Clojure" -c ~/Workspaces/Clojure
+
+# Golang
+neww -n "Golang" -c ~/Workspaces/Go
+
+# Else
+neww -n "Else" -c ~/
+
+# Back to first window, focus on the first pane
+selectw -t 0
+selectp -t 0

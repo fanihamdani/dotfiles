@@ -1,0 +1,137 @@
+# funcs
+function is_bash()
+{
+  if [ "$SHELL" = "/bin/bash" ]; then
+    return 0;
+  fi
+  return 1;
+}
+
+# java
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+
+# maven
+export M2_HOME=$HOME/opt/apache-maven
+export M2=$M2_HOME/bin
+export PATH=$M2:$PATH
+
+# homebrew
+export PATH=/usr/local/bin:$PATH
+
+# gnu utils
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+
+# opt
+export PATH=$HOME/opt/bin:$PATH
+export PATH=$HOME/opt/bin/java:$PATH
+
+# node modules bin
+export PATH="$PATH:$HOME/opt/nodejs/bin"
+
+# Android SDK/NDK
+export ANDROID_HOME=$HOME/opt/android-sdk
+export ANDROID_SDK_ROOT=$ANDROID_HOME
+export ANDROID_NDK_ROOT=$HOME/opt/android-ndk
+export ANDROID_NDK_HOME=$ANDROID_NDK_ROOT
+export PATH=$ANDROID_HOME/tools:$PATH
+export PATH=$ANDROID_HOME/platform-tools:$PATH
+export PATH=$ANDROID_NDK_ROOT:$ANDROID_NDK_ROOT/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/bin:$PATH
+
+# Spring CLI
+export PATH=$HOME/opt/spring-cli/bin:$PATH
+if is_bash; then
+  source $HOME/opt/spring-cli/shell-completion/bash/spring
+#echo
+  #source $HOME/opt/spring-cli/shell-completion/zsh/_spring
+fi
+
+# heroku
+export PATH="/usr/local/heroku/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if is_bash; then
+  source $HOME/opt/google-cloud-sdk/path.bash.inc
+else
+  source $HOME/opt/google-cloud-sdk/path.zsh.inc
+fi
+
+# The next line enables shell command completion for gcloud.
+if is_bash; then
+  source $HOME/opt/google-cloud-sdk/completion.bash.inc
+#else
+#  source $HOME/opt/google-cloud-sdk/completion.zsh.inc
+fi
+
+# python interpreter auto-complete
+PYTHONSTARTUP=$HOME/.pythonrc.py
+export PYTHONSTARTUP
+
+# mongodb
+export PATH="$HOME/opt/mongodb/bin:$PATH"
+
+# sonarqube runner
+export SONAR_RUNNER_HOME="$HOME/opt/sonar-runner-2.4"
+
+# leiningen
+#if is_bash; then
+#  source /usr/local/etc/bash_completion.d/lein-completion.bash
+#else
+#  source /usr/local/share/zsh/site-functions/_lein
+#fi
+
+# golang
+export GOROOT="$HOME/opt/go"
+export PATH="$GOROOT/bin:$PATH"
+export GOPATH="$HOME/Workspaces/Go"
+export PATH="$GOPATH/bin:$PATH"
+
+# grails
+export PATH="$HOME/opt/grails/bin:$PATH"
+
+# kafka
+export KAFKA_HOME="$HOME/opt/kafka"
+export PATH="$KAFKA_HOME/bin:$PATH"
+
+# posgresql
+export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
+
+# cmake
+export PATH="/Applications/CMake.app/Contents/bin:$PATH"
+
+# .net core
+export PATH="/Users/fani/opt/dotnetcore20sdk:$PATH"
+
+# kotlin
+export PATH="/Users/fani/opt/kotlinc/bin:$PATH"
+
+# groovy
+export PATH="/Users/fani/opt/groovy/bin:$PATH"
+
+# metasploit framework
+export PATH="/Users/fani/opt/metasploit-framework:$PATH"
+alias msfconsole='rvm ruby-2.4.2@metasploit-framework do msfconsole'
+alias msfd='rvm ruby-2.4.2@metasploit-framework do msfd'
+alias msfrpc='rvm ruby-2.4.2@metasploit-framework do msfrpc'
+alias msfrpcd='rvm ruby-2.4.2@metasploit-framework do msfrpcd'
+alias msfupdate='rvm ruby-2.4.2@metasploit-framework do msfupdate'
+alias msfvenom='rvm ruby-2.4.2@metasploit-framework do msfvenom'
+
+# autopoint
+export PATH="$(brew --prefix gettext)/bin:$PATH"
+
+# pyenv
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+# rust
+export PATH="$HOME/.cargo/bin:$PATH"
+export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+
+# RVM
+export PATH="$HOME/.rvm/bin:$PATH"
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# wine
+export WINEPREFIX=$HOME/Wine\ Files
