@@ -8,7 +8,7 @@ function is_bash()
 }
 
 # java
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+export JAVA_HOME=`/usr/libexec/java_home -v 11`
 
 # maven
 export M2_HOME=$HOME/opt/apache-maven
@@ -129,9 +129,18 @@ fi
 export PATH="$HOME/.cargo/bin:$PATH"
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 
-# RVM
-export PATH="$HOME/.rvm/bin:$PATH"
-#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+# rbenv
+eval "$(rbenv init -)"
 
 # wine
 export WINEPREFIX=$HOME/Wine\ Files
+
+# Chromium's depot_tools
+export PATH="$HOME/opt/depot_tools:$PATH"
+
+# Postgres
+export PATH="/Applications/Postgres.app/Contents/Versions/11/bin:$PATH"
+
+# https://vitasdk.org
+export VITASDK="$HOME/opt/vitasdk"
+export PATH="$VITASDK/bin:$PATH"

@@ -1,7 +1,7 @@
 # aliases
 alias top="top -F -R -o cpu"
 alias ls="ls -GFh"
-alias cat=ccat
+#alias cat=ccat
 
 # iOS simulator
 alias simulator="open /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app"
@@ -19,10 +19,13 @@ code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 alias gojekbe='mvn jetty:run-war -DROOT_APP=/Users/fani/Workspaces/Gojek/gojek-server-root'
 
 # md5sum
-alias md5sum='md5 -r'
+#alias md5sum='md5 -r'
 
 # nano
 alias nano='/usr/local/bin/nano'
 
 # Rust
 alias rrepl="rustup run nightly-2016-08-01 ~/.cargo/bin/rusti"
+
+# Docker
+alias dcrmall='docker container rm $(docker ps -a -q)'

@@ -1,0 +1,81 @@
+// Place your settings in this file to overwrite the default settings
+{
+      "window.zoomLevel": 0,
+      "explorer.confirmDelete": false,
+
+      // UPDATE
+      "update.mode": "manual",
+      "extensions.autoUpdate": false,
+      "extensions.autoCheckUpdates": false,
+
+      // WORKBENCH
+      "files.autoSaveDelay": 1000,
+      "files.autoSave": "afterDelay",
+      "workbench.iconTheme": "vscode-icons",
+      "workbench.colorTheme": "1337",
+      "workbench.editor.closeEmptyGroups": false,
+      "workbench.editor.showIcons": true,
+      "workbench.tips.enabled": true,
+      "workbench.tree.indent": 8,
+      "workbench.startupEditor": "none",
+      "workbench.statusBar.feedback.visible": false,
+      "workbench.statusBar.visible": true,
+      "workbench.colorCustomizations": {
+            // "statusBar.background": "#ff0000",
+            // "tab.activeBorder": "#ff0000"
+            // "gitDecoration.ignoredResourceForeground": "#ff0000"
+            "[1337]": {
+                  // "tab.activeBackground": "#ff0000"
+            }
+      },
+      // Coming in May
+      // "workbench.dialogs.useSimplified": true,
+
+      // EDITOR
+      "editor.minimap.enabled": false,
+      "editor.fontFamily": "SF Mono, Fira Code, Menlo, Monaco, 'Courier New', monospace",
+      "editor.fontLigatures": true,
+      "editor.cursorSmoothCaretAnimation": false,
+      "editor.renderIndentGuides": true,
+      "editor.renderWhitespace": "boundary",
+      "editor.multiCursorModifier": "alt",
+      "editor.copyWithSyntaxHighlighting": true,
+      "editor.suggestSelection": "first", // "recentlyUsed" might breaks intellisense
+      "diffEditor.renderSideBySide": true,
+
+      // MARKDOWN
+      "[markdown]": {
+            "editor.wordWrap": "on",
+            "editor.quickSuggestions": false,
+            "editor.minimap.enabled": true
+      },
+
+      // NPM
+      "npm.enableScriptExplorer": true,
+      "npm.packageManager": "yarn",
+
+      // GIT
+      "git.autofetch": true,
+      "git.defaultCloneDirectory": "~/Downloads",
+      "git.enableSmartCommit": false,
+
+      // TERMINAL
+      "terminal.integrated.showExitAlert": true,
+      "terminal.integrated.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
+      "terminal.integrated.fontSize": 12,
+      "terminal.integrated.fontWeight": "100",
+      "terminal.integrated.shell.osx": "/bin/zsh",
+
+      // OTHERS
+      "csharp.omnisharp": "/Users/fani/opt/bin/omnisharp",
+      "breadcrumbs.enabled": true,
+      "python.jediEnabled": false,
+      "vsintellicode.modify.editor.suggestSelection": "choseToUpdateConfiguration",
+      "files.exclude": {
+            "**/.classpath": true,
+            "**/.project": true,
+            "**/.settings": true,
+            "**/.factorypath": true
+      },
+      "editor.fontSize": 14,
+}
